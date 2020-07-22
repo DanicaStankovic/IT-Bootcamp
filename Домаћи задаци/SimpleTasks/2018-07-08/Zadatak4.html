@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+<head>
+</head>
+<body>
+	<div id="div" style="box-sizing:border-box;width:60%;height:100px;border:2px solid #C0809C;"></div>
+	<button onclick="arrFunction()" style="box-sizing:border-box;height:20px;background-color:#FFC0CB;border:2px solid #C0809C;">Click here!</button>
+<script>
+	function arrFunction () {
+		let arrayColors = ["yellow", "blue", "green", "red", "grey"];
+		x = Number(prompt(`Please enter some number between 1 and 5: `));
+		for (i = 0; i < 5; i++) {
+			if (x === (i + 1)) {
+				document.getElementById("div").style.backgroundColor = arrayColors[i];
+			}
+		}	
+	}
+</script>
+</body>
+</html>
+<!-- 4. Create simple html page with one box and one button.You will create an array of 5 colors.When user clicks on a button you will ask him to enter some number between 1-5.Choose color from the array depending of the entered number and then set it to the background of the div-->

@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+<head>
+</head>
+<body>
+<script>
+	let array = [2, 43, 5, 216, 7, 212, -554, 234, -66, 431, 84];
+	function largestNumber(arr) {
+		let largest = Math.max(...arr);
+		larNum = arr.indexOf(largest);
+		return `The largest number in array: ${arr} is number ${largest}, and its position is ${larNum}.`;
+	}
+	console.log(largestNumber(array));
+</script>
+</body>
+</html>
+
+<!--My first solution was this one below, but then I remembered of indexOf() method which I, at the end, have used in solution above.
+<script>
+	let array = [2, 43, 5, 216, 7, 212, -554, 234, -66, 431, 84];
+	function largestNumber(arr) {
+		let largest = Math.max(...arr);
+		for (i = 0; i < arr.length; i++) {
+			if (largest === arr[i]) {
+				return `The largest number in array: ${arr} is number ${arr[i]}, and its position is ${i}.`;
+			}
+		}
+	}
+	console.log(largestNumber(array));
+</script>
+-->

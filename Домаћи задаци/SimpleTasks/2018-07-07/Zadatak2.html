@@ -1,0 +1,18 @@
+<!doctype html>
+<html>
+<head>
+</head>
+<body>
+<script>
+	let array = [2, 43, 5, 216, 7, 212, -554, 234, -66, 431, 84];
+	function checkNumber() {
+		n = (prompt(`Please enter some number: `));
+		array.join("").includes(n) === true ? message = `Number ${n} is in our array: ${array}.` : message = `Number ${n} is not in our array: ${array}.`;
+		return alert(message);
+	}
+	console.log(checkNumber());
+</script>
+</body>
+</html>
+
+<!--2. Create an array of 11 numbers, than create a simple function that will prompt user for somenumber, than it will check wheater that number is in array.If it is in the array it will give message:"Number [entered number] is in our array" or "Number[entered number] is not in our array" if it is not.-->

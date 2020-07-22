@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <p id="appropriateText"></p>
+    <script>
+      let d = new Date();
+      let currentDay = Number(d.getDay());
+      switch (currentDay) {
+        case 4: case 5: message = "Hello, weekend is near.";
+        break;
+        case 6: case 0: message = "Hello, nice weekend!"
+        break;
+        default: message = "Hello, week has started.";
+      }
+      document.getElementById("appropriateText").innerHTML = message;
+    </script>
+  </body>
+</html>
+
+<!--2. Create simple HTML page and related functions that will:Get current day and write appropriate text into the paragraph:If it is Monday, Tuesday or Wednesday - "Hello, week has started"If it is Thursday or Friday - "Hello, weekend is near"If it is Saturday or Sunday - "Hello, nice weekend"-->

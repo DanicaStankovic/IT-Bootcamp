@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+<head>
+</head>
+<body>
+	<p id="demo1"></p>
+	<p id="demo2"></p>
+	<button onclick="buttonAdding()">Click here to add some text!</button>
+	<button onclick="buttonDeleting()">Click here to delete added text!</button>
+	<script>
+		let selectingButtons = document.querySelectorAll("#demo1, #demo2");
+		arrSelectingButtons = [...selectingButtons];
+		function buttonAdding () {
+			for (i = 0; i < 2; i++) {
+        		selectingButtons[i].innerHTML = "This is the text we added.";
+			}
+		}
+		function buttonDeleting () {
+			for (i = 0; i < 2; i++) {
+        		selectingButtons[i].innerHTML = "";
+        	}
+        }
+	</script>
+</body>
+</html>
+
+<!--1. Create simple HTML page that will have 2 paragraphs(demo1 and demo2) and 2 buttons(button1 and button2).When you click on button 1 you will add text to both paragraphs (for example "This is the text we added"). When you click on button 2 you will remove text from paragraphs.-->

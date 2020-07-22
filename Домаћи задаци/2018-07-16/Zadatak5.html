@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset=utf-8 />
+  <title>Zadatak 5</title>
+</head>
+<body>
+  <div id="mojDiv" style="width: 200px; height: 100px">
+    <select id="mojIzbor" onchange="promenaBoje()" style="margin:20px;">
+      <option value="Izaberi boju">Izaberi boju</option>
+      <option value="green">Zelena</option>
+      <option value="red">Crvena</option>
+      <option value="blue">Plava</option>
+      <option value="pink">Roze</option>
+      <option value="grey">Siva</option>      
+      <option value="black">Crna</option>
+    </select>
+  </div>
+  <script>
+    function promenaBoje() {
+      let izabranaOpcija = document.getElementById("mojIzbor");
+      let boja = izabranaOpcija.options[izabranaOpcija.selectedIndex].value;
+      if (boja == "Izaberi boju") console.log(`Morate izabrati boju iz padajuce liste.`);
+      else document.getElementById("mojDiv").style.backgroundColor = boja;
+    }
+  </script>
+</body>
+</html>
+
+<!--5.Napraviti HTML stranu u okviru koje se nalazi div i u njemu padajuća lista čije su vrednosti stavki boje. Prvi element liste ima vrednost “Izaberi boju”. Izborom neke boje promeniti pozadinsku boju div-a u boju koja je izabrana iz liste. Ukoliko se izabere prva stavka, u okviru sistemskog dijaloga ispisati obaveštenje korisniku da mora izabrati stavku iz liste sa bojom.-->

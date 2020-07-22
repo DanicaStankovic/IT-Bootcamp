@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+<head>
+</head>
+<body>
+  <script>
+	let year;
+
+	year = Number(prompt(`Унесите годину: `));
+	if (year % 4 == 0) {
+		if (year % 100 == 0) {
+			alert(year + ` is a leap year in the Gregorian calendar and the final year of a century.`);
+		}
+		else if (year % 100 != 0) {
+			alert(year + ` is a leap year in the Gregorian calendar.`);
+		}
+	}
+	else if (year % 4 != 0) {
+		alert(year + ` isn't a leap year in the Gregorian calendar.`);
+	}
+	
+  </script>
+</body>
+</html>
+
+<!--
+2) Write a JavaScript program that prompts you to enter a year and then determines whether it's a leap year in the Gregorian calendar, printing the answer in an alert. Picture below define a rules for such determination: -->

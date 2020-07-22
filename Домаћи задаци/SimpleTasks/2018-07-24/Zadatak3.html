@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Zadatak 3</title>
+</head>
+<body>
+  <div id="divZaMax"></div>
+  <div id="divZaMin"></div>
+  <script type="text/javascript">
+      let mojNiz = [];
+      let max = 15;
+      for (let i = 0; i < max; i++) {
+        mojNiz[i] = Math.floor((Math.random() * 100) + 1);
+        let paragraf = document.createElement("p");
+        paragraf.innerHTML = mojNiz[i];
+        paragraf.style.margin = "1px";
+        paragraf.style.padding = "1px";
+        paragraf.style.border = ".3px solid black";
+        paragraf.style.textAlign = "center";
+        document.body.appendChild(paragraf);
+      }
+      let najveciElement = Math.max(...mojNiz);
+      let najmanjiElement = Math.min(...mojNiz);
+      let paragrafi = document.getElementsByTagName("p");
+      for (let i = 0; i < max; i++) {
+        let sadrzajPar = paragrafi[i].innerHTML;
+        if (sadrzajPar === najveciElement.toString()) {
+          paragrafi[i].style.backgroundColor = "lightgreen";
+          paragrafi[i].addEventListener("click", function() {
+            window.localStorage.setItem("largest_value", paragrafi[i].innerHTML);
+            upisVrednosti();
+          });
+        }
+        if (paragrafi[i].innerHTML === najmanjiElement.toString()) {
+          paragrafi[i].style.backgroundColor = "red";
+          paragrafi[i].addEventListener("click", function() {
+            window.localStorage.setItem("smallest_value", paragrafi[i].innerHTML);
+            upisVrednosti();
+          });
+        }
+      }
+
+      function upisVrednosti() {
+        if (localStorage.getItem("largest_value") !== null) {
+          document.getElementById("divZaMax").innerHTML = window.localStorage.getItem("largest_value");
+        }
+        if (localStorage.getItem("smallest_value") !== null) {
+          document.getElementById("divZaMin").innerHTML = window.localStorage.getItem("smallest_value");
+        }
+      }
+      window.onload = upisVrednosti;
+
+  </script>
+</body>
+</html>
+
+<!--
+3.Using example from the task 2, when loading page write local storage values on 2 divs on the top.When clicking on paragraphs smallest and highest and adding values to the storagechange divs on the top by getting their new values from the local storage.HINT​: Try to create one function that will get local storage values and add it to divs ancall it on load and on clicking on paragraphs.
+-->

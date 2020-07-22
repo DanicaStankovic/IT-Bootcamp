@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset=utf-8 />
+  <title>Zadatak 3</title>
+</head>
+<body>
+  <form id="forma">
+    <input type="text" id="polje" size="50">
+    <input type="button" value="Klikni" onclick="duzinaKaraktera()">	
+  </form>
+  <div id="prikaz"></div>
+  <script>
+    function duzinaKaraktera() {
+    	let sadrzajDiva = "";
+    	if (document.getElementById("polje").value.length > 70) {
+    		let ogranicenSadrzaj = document.getElementById("polje").value;
+    		document.getElementById("prikaz").innerHTML = ogranicenSadrzaj.slice(0,70);
+    	}
+	} 
+  </script>
+</body>
+</html>
+
+<!--3.Napraviti HTML stranu na kojoj se nalazi formular i div ispod formulara. U okviru formulara nalazi se prošireno tekstualno polje i taster. Klikom na taster proveriti dužinu karaktera unutar polja. Ukoliko je dužina karaktera veća od 70 karaktera, odseći prvih 70 i prikazati ih u div-u ispod forme. -->

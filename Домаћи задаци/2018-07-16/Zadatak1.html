@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset=utf-8 />
+  <title>Zadatak 1</title>
+</head>
+<body>
+  <form id="forma">
+    <input type="radio" id="htmlId" name="tehnologije" value="HTML">
+    <label for="htmlId">HTML</label>
+    <input type="radio" id="cssId" name="tehnologije" value="CSS">
+    <label for="cssId">CSS</label>
+    <input type="radio" id="jsId" name="tehnologije" value="JavaScript">
+    <label for="jsId">JavaScript</label>
+    <input type="radio" id="phpId" name="tehnologije" value="PHP">
+    <label for="phpId">PHP</label>
+    <input type="radio" id="ostalo" name="tehnologije" value="Ostalo" onclick="prikaziPolje()">
+    <label for="ostalo">Ostalo</label><br>
+    <input type="text" id="polje" style="display:none" placeholder="Unesite naziv Web tehnologije">
+    <input type="button" value="Klikni" onclick="izlistaj()">	
+  </form>
+  <div id="vrednosti"></div>
+  <script>
+    function prikaziPolje() {
+	  document.getElementById("polje").style.display = "block";
+	  document.getElementById("polje").style.width = "200px";
+	}
+
+	function izlistaj() {
+      let mojaForma = document.getElementById("forma");
+      for (i = 0; i < mojaForma.length; i++) {
+	    let vrednostiForme = mojaForma[i].value;
+	    document.getElementById("vrednosti").innerHTML += `${vrednostiForme} <br>`;
+	  }
+	} 
+  </script>
+</body>
+</html>
+
+<!--1.Napraviti HTML stranu na kojoj se nalazi formular i div ispod formulara. U okviru formulara nalazi se radio button lista sa Web tehnologijama i programskim jezicima i ispod nje tekstualno polje i taster.  Poslednji element radio button liste je Ostalo. Tekstulano polje je inicijalno sakriveno. Biće vidljivo ukoliko se iz liste izabere stavka Ostalo. Vrednosti elemenata forme ispisati u div-u ispod formulara.-->

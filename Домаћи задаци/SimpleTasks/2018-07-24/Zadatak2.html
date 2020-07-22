@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Zadatak 2</title>
+</head>
+<body>
+  <script type="text/javascript">
+    
+    let mojNiz = [];
+    max = 15;
+    for (let i = 0; i < max; i++) {
+      mojNiz[i] = Math.floor((Math.random() * 100) + 1);
+      let paragraf = document.createElement("p");
+      paragraf.innerHTML = mojNiz[i];
+      paragraf.style.margin = "1px";
+      paragraf.style.padding = "1px";
+      paragraf.style.border = ".3px solid black";
+      paragraf.style.textAlign = "center";
+      document.body.appendChild(paragraf);
+    }
+    let najveciElement = Math.max(...mojNiz);
+    let najmanjiElement = Math.min(...mojNiz);
+    let paragrafi = document.getElementsByTagName("p");
+    for (let i = 0; i < max; i++) {
+      let sadrzajPar = paragrafi[i].innerHTML;
+      if (sadrzajPar === najveciElement.toString()) {
+        paragrafi[i].style.backgroundColor = "lightgreen";
+        paragrafi[i].addEventListener("click", function() {
+          window.localStorage.setItem("largest_value", paragrafi[i].innerHTML);
+        });
+      }
+      if (paragrafi[i].innerHTML === najmanjiElement.toString()) {
+        paragrafi[i].style.backgroundColor = "red";
+        paragrafi[i].addEventListener("click", function() {
+          window.localStorage.setItem("smallest_value", paragrafi[i].innerHTML);
+        });
+      }
+    }
+  </script>
+</body>
+</html>
+
+<!--
+2.Create an array of 15 numbers (random, so every time you load page you will get newarray), write them into the paragraphs under each other.Find the largest element and color its paragraph into green, add ability to the paragraphwhen you click on it you will write its value into local storage as “​largest_value​”.For the smallest element, color its paragraph red and when you click on it you will beable to write its value into storage as “​smallest_value​”.HINT​: Try to find max and min values when creating paragraphs
+-->

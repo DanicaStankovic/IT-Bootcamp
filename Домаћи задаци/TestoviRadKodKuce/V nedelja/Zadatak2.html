@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset=utf-8 />
+  <title>Task 2</title>
+</head>
+<body>
+  <div id="divZaArr"></div>
+  <script>
+	 let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20];
+	 let arr1 = [];
+	 let arr2 = [];
+	 document.getElementById("divZaArr").innerHTML = `My array is: [${arr}]`;
+	 for (i = 0; i < arr.length; i++) {
+	   (i % 2) === 0 ? arr1.push(arr[i]) : arr2.push(arr[i]);
+	 }
+	 document.getElementById("divZaArr").innerHTML += `<br> Array with numbers on even positions is: [${arr1}]`;
+	 document.getElementById("divZaArr").innerHTML += `<br> Array with numbers on odd positions is: [${arr2}]`;
+  </script>
+</body>
+</html>
+
+<!--2. TASK (20pts)​ Create an array of 20 numbers.Print it on the top of the page.Create 2 arrays from it by adding numbers on even positions to first array and numbers on oddpositions to second array.Print them on the page under each other and under the original, starting array.-->

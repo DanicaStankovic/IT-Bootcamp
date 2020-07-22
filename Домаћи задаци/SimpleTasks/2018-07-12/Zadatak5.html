@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <div id="rectangleDiv" style="border:2px solid red"></div>
+    <script>
+      let rectangle = {
+        width: 200,
+        height: 240,
+        area: function () {
+          let rectangleArea = width * height;
+        },
+        perimeter: function () {
+          let rectanglePerimeter = 2 * (width + height);
+        }
+      }
+      document.getElementById("rectangleDiv").style.width = `${rectangle.width}px`;
+      document.getElementById("rectangleDiv").style.height = `${rectangle.height}px`;
+    </script>
+  </body>
+</html>
+
+<!--5. Create simple HTML page with javascript object "rectangle".It will have 2 properties "width" and "height" and methods "area" and "perimeter".-->

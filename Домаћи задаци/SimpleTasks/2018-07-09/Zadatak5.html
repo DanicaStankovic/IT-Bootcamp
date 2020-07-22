@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+<head>
+</head>
+<body>
+	<script>
+	  let array = [12, 21, 53, 41, 15, 61, 97, 81, 19, 91, 11];
+	  let enteredIndex = Number(prompt("Please enter some number between 0 and 10: "));
+	  let enteredNum = array[enteredIndex];
+
+	  let numberBefore = array[(enteredIndex - 1)];
+	  if (numberBefore < enteredNum) {
+	  	number1=`Element before is ${numberBefore} and it is smaller than ${enteredNum}.`;
+	  }
+	  else if (numberBefore > enteredNum) {
+	  	number1=`Element before is ${numberBefore} and it is bigger than ${enteredNum}.`;
+	  }
+	  if (enteredIndex === 0) {
+	  	number1=`There is no element before ${enteredNum}.`;
+	  }
+
+	  let numberAfter = array[(enteredIndex + 1)];
+	  if (numberAfter < enteredNum) {
+	  	number2=`Element after is ${numberAfter} and it is smaller than ${enteredNum}.`;
+	  }
+	  else if (numberAfter > enteredNum) {
+	  	number2=`Element after is ${numberAfter} and it is bigger than ${enteredNum}.`;
+	  }
+	  if (enteredIndex === 10) {
+	  	number2=`There is no element after ${enteredNum}.`;
+	  }
+	  alert(`Number on the position [${enteredIndex}] is ${enteredNum}. ${number1} ${number2}`);
+	</script>
+</body>
+</html>
+
+<!--Make an array of 11 numbers.Ask user to enter some number.Find number on that position in array.Write what number is that and write if the number on the position before and after is smaller orlarger.Example of the message is: "Number on the position 4 is 9, element before it is larger, elementafter is smaller.-->

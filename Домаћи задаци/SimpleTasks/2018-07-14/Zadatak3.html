@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset=utf-8 />
+<style>
+</style>
+</head>
+<body>
+  <div id="divZaGradove"></div>
+  <script>
+    let arrGradovi = ["Beograd", "Bar", "Budimpešta", "Bukurešt", "Beč"];
+    document.getElementById("divZaGradove").innerHTML = arrGradovi;
+    arrGradovi.sort();
+    let parZaSortirano = document.createElement("p");
+    parZaSortirano.innerHTML = arrGradovi;
+    document.body.appendChild(parZaSortirano);
+  </script>
+</body>
+</html>
+
+<!--3. Create an array of 5 cities an write them on the page.Sort it and write it under.-->

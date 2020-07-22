@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+<head>
+</head>
+<body>
+  <script>
+let i, j;
+let prviArray = [[] , [] , [] , []];
+let drugiArray = [[] , []];
+let x = 0;
+
+for (i = 0; i < 4; ++i) {
+  for (j = 0; j < 2; ++j) {
+  prviArray[i][j] = ++x;
+  }
+}
+
+for (i = 0; i < 2; ++i) {
+  for (j = 0; j < 4; ++j) {
+  drugiArray[i][j] = prviArray[j][i] ** 2; 
+  }
+}
+
+console.log(prviArray, drugiArray);
+
+  </script>
+</body>
+</html>

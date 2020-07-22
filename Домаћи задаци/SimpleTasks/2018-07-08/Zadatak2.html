@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+<head>
+</head>
+<body>
+<div id="div1" style="box-sizing:border-box;width:45%;height:100px;background-color:#FFC0CB;border:2px solid #C0809C;float: left;"></div>
+<div id="div2" style="box-sizing:border-box;width:45%;height:100px;background-color:#FFC0CB;border:2px solid #C0809C;float:right;"></div>
+<button onclick="blue()" style="height:50px;width:10%;background-color:white;border:2px solid blue;">Blue</button>
+<button onclick="red()" style="height:50px;width:10%;background-color:white;border:2px solid red;">Red</button>
+<script>
+	let blue = function() {
+		x = document.getElementById("div1");
+		x.style.backgroundColor = "blue";
+		}
+	let red = function() {
+		x = document.getElementById("div2");
+		x.style.backgroundColor = "red";
+		}
+</script>
+</body>
+</html>
+
+<!--2. Create simple HTML page that will have 2 divs (boxes) and 2 buttons (button1 and button2).Button 1 will change div1 background to blue, button 2 will change div2 background to red.-->

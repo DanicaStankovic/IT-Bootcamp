@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <div id="arraysDiv"></div>
+    <script>
+      let arr1 = [];
+      let arr2 = [];
+      let arr3 = [];
+      (function thirdArray() {
+        for (i = 0; i < 11; i++) {
+          arr1[i] = i;
+          arr2[i] = i + 20;
+          arr3[i] = arr1[i] + arr2[i];
+          document.getElementById("arraysDiv").innerHTML = `Arr1 =[${arr1}] <br> Arr2=[${arr2}] <br> Arr3[${arr3}]`;
+        }
+      })();
+    </script>
+  </body>
+</html>
+
+<!--4. Create simple html page with a div. Create 2 arrays of 11 numbers, show them into the div(nice, under each other).Write a function that will create third array that is sum of those 2 arrays.Write third array into the div under those 2 arrays.-->

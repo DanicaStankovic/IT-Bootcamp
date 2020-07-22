@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+<head>
+</head>
+<body>
+   <div id="rectangle" style="border:3px solid red;"></div>
+   <p id="par"></p>
+   <script>
+    let dimensions = prompt(`Please enter two numbers from 100 to 200, separated by comma: `);
+    let widthOfRectangle = Number(dimensions.split(",").slice(0, 1));
+    let heightOfRectangle = Number(dimensions.split(",").slice(1, 2));
+    document.getElementById("rectangle").style.width = `${widthOfRectangle}px`;
+    document.getElementById("rectangle").style.height = `${heightOfRectangle}px`;
+    let rectangle = {
+          width: widthOfRectangle,
+          height: heightOfRectangle,
+          area: function() {
+            return this.width * this.height;
+          },
+          perimeter: function() {
+            return (this.width + this.height) * 2;
+          }
+    };
+    document.getElementById("par").innerHTML = `Rectangle area is: ${rectangle.area()}. Rectangle perimeter is: ${rectangle.perimeter()}.`
+
+   </script>
+</body>
+</html>
+
+
+<!--3. Create simple HTML page and related functions that will represent rectangle.Ask user to enter 2 numbers as a length of a rectangle sides, from 100 to 200.Create that rectangle as a box on the page.First number is width, second is height. Use border on that box, to be shown better.Than create a JS object "rectangle" from that numbers as properties.Create 2 methods:"area" that will calculate area of the rectangle"perimeter" that will calculate sum of the sidesShow relevant message under the box in some paragraph.For example:Rectangle area is: 15.000Rectangle perimeter is: 500-->

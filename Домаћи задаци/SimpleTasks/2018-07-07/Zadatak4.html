@@ -1,0 +1,18 @@
+<!doctype html>
+<html>
+<head>
+</head>
+<body>
+<script>
+	function smallerNumber() {
+		let numbers = prompt(`Please enter two numbers, separated by comma: `)
+		let number1 = Number(numbers.split(",").slice(0, 1));
+		let number2 = Number(numbers.split(",").slice(1, 2));
+		number1 < number2 ? alert(`${number1} is smaller than ${number2}.`) : alert(`${number2} is smaller than ${number1}.`);
+	}
+	smallerNumber();
+</script>
+</body>
+</html>
+<!--4. Create simple function that will prompt user for two numbers, check which one is smaller andreturns proper message, for example:"Number [first entered number] is smaller than [second entered number]"-->
+

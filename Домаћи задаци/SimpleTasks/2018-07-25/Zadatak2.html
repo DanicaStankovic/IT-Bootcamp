@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Zadatak 2</title>
+</head>
+<body>
+  <div id="mojDiv"></div>
+  <button id="mojTaster">Ispisi proizvod</button>
+  <script type="text/javascript">
+    let mojNiz = [];
+    let max = 10;
+    for (let i = 0; i < max; i++) {
+      mojNiz[i] = Math.floor((Math.random() * 10) + 1);
+    }
+    function izracunajProizvod(proizvod, cinilac) {
+      return proizvod * cinilac;
+}
+    document.getElementById("mojTaster").addEventListener("click", ispisProizvoda);
+    function ispisProizvoda(value) {
+      document.getElementById("mojDiv").innerHTML = "Proizvod niza: [" + mojNiz + "] je: " + mojNiz.reduce(izracunajProizvod);
+    }
+  </script>
+</body>
+</html>
+
+<!--
+  2.Napraviti HTML stranu na kojoj se nalazi div i taster. Kreirati niz od 10 elemenata numeričkih vrednosti. Klikom na taster
+u div-u ispisati proizvod brojeva koji su vrednosti elemenata niza. Koristiti reduce().
+-->

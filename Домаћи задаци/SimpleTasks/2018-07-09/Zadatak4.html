@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+<head>
+</head>
+<body>
+	<div id="leftDiv" style="height:200px; width:50%; box-sizing:border-box; float:left; border:1px solid red;"></div>
+	<div id="rightDiv" style="height:200px; width:50%; box-sizing:border-box; float:right; border:1px solid blue;"></div>
+	<p id="pId" style="clear:both;"></p>
+	<button onclick="clickFunction()">Click here!</button>
+	<script>
+	let clickFunction = function () {
+		let choice = prompt("Please enter 'left' or 'right' to choose the side: ");
+		let text = "This is just some text."
+		if (choice != "left" && choice != "right")
+		document.getElementById("pId").innerHTML = text;
+		else if (choice === "left") {
+			document.getElementById("leftDiv").innerHTML = text;
+		}
+		else if (choice === "right") {
+			document.getElementById("rightDiv").innerHTML = text;
+		}
+	};
+	</script>
+</body>
+</html>
+
+<!--4. Create simple html page with 2 boxes, left and right, with borders and paragraph under them.Create one button.When user clicks on a button, your page asks him to enter left or right.If he selects left you will write text into the left box, right is for right box.If user enters something else it will print it into the paragraph under the boxes.-->

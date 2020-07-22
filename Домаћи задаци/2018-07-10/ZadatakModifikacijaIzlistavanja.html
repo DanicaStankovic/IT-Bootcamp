@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<body>
+  <h1>The HTMLCollection Object</h1>
+  <p>Use the getElementsByTagName() method to return an HTMLCollection:</p>
+  <pre>Paragraf 1</pre>
+  <pre>Paragraf 2</pre>
+  <pre>Paragraf 3</pre>
+  <pre>Paragraf 4</pre>
+  <pre>Paragraf 5</pre>
+  <button onclick="listaj()">Izlistaj HTML kolekciju</button>
+
+  <script>
+    function listaj(){
+      let x = document.getElementsByTagName("pre");
+      stampajListu(x);
+    }
+
+    function stampajListu(lista) {
+      let printout = document.createElement("div");
+      document.body.appendChild(printout);
+      let idAttr = document.createAttribute("id");
+      idAttr.value = "printoutDiv";
+      printout.attributes.setNamedItem(idAttr);
+      for (let i = 0; i < lista.length; i++) {
+        let paragraf = document.createElement("p");
+        let paragrafText = document.createTextNode(lista.item(i).innerHTML);
+        paragraf.appendChild(paragrafText);
+        document.getElementById("printoutDiv").appendChild(paragraf);
+        if ((i+2)%2 === 0) {
+          paragraf.style.color = 'blue';
+        }
+        else paragraf.style.color = 'red';
+        }
+    }
+</script>
+
+</body>
+
+</html>
+
+
+<!--
+Домаћи задатак везан за ово је: 
+а) Модификујте горњи програм тако да се уместо на конзоли садржај сваког елемента сачуваног у колекцији х одштампа на страници ниже од дугмета.
+б) Затим то модификујте тако да се садржај сваког од тих елемената са парним индексом промени у плаво, а оних са непарним у црвено.
+-->

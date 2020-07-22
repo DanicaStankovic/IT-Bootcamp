@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Zadatak 1</title>
+</head>
+<body>
+  <script type="text/javascript">
+    let mojNiz = [];
+    let mojDiv = document.createElement("div");
+    mojDiv.style.height = "20px";
+    document.body.appendChild(mojDiv);
+    for (let i = 0; i < 35; i++) {
+      mojNiz[i] = Math.floor((Math.random() * 100) + 1);
+      let paragraf = document.createElement("p");
+      paragraf.innerHTML = mojNiz[i];
+      paragraf.style.margin = "1px";
+      paragraf.style.padding = "1px";
+      paragraf.style.border = ".3px solid red";
+      paragraf.style.textAlign = "center";
+      document.body.appendChild(paragraf);      
+      document.getElementsByTagName("p")[i].addEventListener("click", function() {
+        document.getElementsByTagName("p")[i].style.backgroundColor = "lightblue";
+        mojDiv.innerHTML = document.getElementsByTagName("p")[i].innerHTML;});
+    }
+  </script>
+</body>
+</html>
+
+<!--
+1.Create an array of 35 numbers, write them into paragraphs under each other and createa div on top of them.When you click on some paragraph it will change color to lightblue and you will write itscontent into the div on the top.
+-->

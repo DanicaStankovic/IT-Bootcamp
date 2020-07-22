@@ -1,0 +1,17 @@
+<!doctype html>
+<html>
+<head>
+</head>
+<body>
+  <script>
+  	function palindrom(string) {
+
+  	string1 = string.toLowerCase().replace(/[\W_]/g, '');
+  	let string2 = string1.split("").reverse().join("");
+	string1 === string2 ? alert(`${string} predstavlja palindrom.`) : alert(`${string} nije palindrom.`);
+	}
+	
+  	palindrom(prompt(`Unesite rec, frazu ili sekvencu reci: `));
+  </script>
+</body>
+</html>

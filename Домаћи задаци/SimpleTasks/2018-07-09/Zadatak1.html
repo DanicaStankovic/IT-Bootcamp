@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+<head>
+</head>
+<body>
+	<p id="demo"></p>
+	<script>
+		(function date() {
+			let date = new Date();
+			let day = date.getDate();
+			if (day < 10) day = "0" + day;
+			let month = 1 + Number(date.getMonth());
+			if (month < 10) month = "0" + month;
+			document.getElementById("demo").innerHTML=`${day}-${month}-${date.getFullYear()}`;
+		})();
+		
+</script>
+</body>
+</html>
+
+<!--1. Make a simple HTML page with one paragraph and self-invoking function that will printcurrent date in format from example: 21-07-2018 into the paragraph-->

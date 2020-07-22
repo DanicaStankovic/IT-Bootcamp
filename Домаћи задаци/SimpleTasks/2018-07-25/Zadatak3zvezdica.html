@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Zadatak 3*</title>
+</head>
+<body>
+  <div id="mojDiv"></div>
+  <script type="text/javascript">
+    let brendoviAutomobila = ["Citroen", "Ford", "BMW", "Fiat", "Renault", "Audi", "Volvo", "Mercedes", "Peugeot", "Skoda"];
+    const tekst = brendoviAutomobila.filter(brend => brend.length > 4);
+    document.getElementById("mojDiv").innerHTML = tekst;
+  </script>
+</body>
+</html>
+
+<!--
+3.Napraviti HTML stranu na kojoj se nalazi div . Kreirati niz od 10 elemenata čije su vrednosti brendovi autmobila. Prilikom učitavanja stranice ispisati u div-u samo one elemente niza čija je dužina karaktera veća od 4. Koristiti filter(). *Probati i sa arrow function notacijom.
+-->

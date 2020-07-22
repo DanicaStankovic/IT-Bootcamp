@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+<head>
+</head>
+<body>
+  <script>
+  	function najduzaRec(string) {
+	  	niz = string.split(" ");
+	  	let najduza = 1;
+	  	let rec = "";
+	  	for (let i = 0; i < niz.length; i++) {
+	  		if (niz[i].length > najduza) {
+	  			rec = niz[i];
+	  			najduza = niz[i].length;
+	  		}
+	  	} 
+	alert(`Najduza rec je rec ${rec}.`);
+	}
+	najduzaRec(prompt(`Unesite sekvencu reci: `));
+  </script>
+</body>

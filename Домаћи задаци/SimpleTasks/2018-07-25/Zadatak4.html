@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Zadatak 4</title>
+</head>
+<body>
+  <img src="https://sites.google.com/site/srbija1144/_/rsrc/1426603825501/slike/srbija-priroda/4135284.jpg" height="400">
+  <p>Ovo je Srbija.</p>
+  <p>Vidikovac Banjska stena</p>
+  <p>Nalazi se na Tari.</p>
+  <div id="mojDiv"></div>
+  <script type="text/javascript">
+    let elementi = document.body.children;
+    elementiBody = "";
+    for (let i = 0; i < elementi.length; i++) {
+      elementiBody += elementi[i].tagName + ", ";
+    }
+    let duzina = document.body.children.length;
+    document.getElementById("mojDiv").innerHTML = "Elementi koji pripadaju body-ju su: " + elementiBody + "a njihova duzina je: " + duzina;
+  </script>
+</body>
+</html>
+
+<!--
+4.Napraviti HTML stranu na kojoj se nalazi slika, nekoliko p tagova i div. U div-u ispisati nazive svih elemenata koji pripadaju tagu body, kao i ukupan broj elemenata koji pripadaju body tagu. 
+-->

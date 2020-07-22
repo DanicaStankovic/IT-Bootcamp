@@ -1,0 +1,19 @@
+<!doctype html>
+<html>
+<head>
+</head>
+<body>
+  <script>
+let arrayX = [], arrayY = [];
+let i, x;
+for (i = 0, x = 100; i < 20; i++){
+  arrayX[i] = x++;
+}
+arrayY = arrayX.slice (13, 20);
+arrayX.length = 13;
+arrayX.push(222);
+arrayX = arrayX.concat(arrayY);
+console.log(arrayX);
+  </script>
+</body>
+</html>

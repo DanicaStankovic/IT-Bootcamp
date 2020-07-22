@@ -1,0 +1,19 @@
+<!doctype html>
+<html>
+<head>
+</head>
+<body>
+  <script>
+	function sumaKvadrata(n) {
+		let kvadrat = [];
+		let suma = 0;
+		for (i = 0; i < n.length; i++) {
+			kvadrat[i] = n[i] ** 2;
+			suma += kvadrat[i];
+		}
+		return suma;
+	}
+	console.log(`Suma kvadrata svih brojeva niza je ${sumaKvadrata([1, 3, 8, 5])}.`);
+  </script>
+</body>
+</html>

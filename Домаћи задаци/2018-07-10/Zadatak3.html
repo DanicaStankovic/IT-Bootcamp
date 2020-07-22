@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <script>
+    let dimensions = prompt(`Please enter three numbers, separated by commas: `);
+    let a = Number(dimensions.split(",").slice(0, 1));
+    let b = Number(dimensions.split(",").slice(1, 2));
+    let c = Number(dimensions.split(",").slice(2, 3));
+    (function triangleArea () {
+      let theLongestSide;
+      if (a > b) {
+        theLongestSide = a;
+      }
+      else theLongestSide = b;
+      if (theLongestSide < c) {
+        theLongestSide = c;
+      }
+      if ((a + b + c - theLongestSide) < theLongestSide) {
+        alert('Theese numbers cannot be sides of a triangle.')
+      }
+      else {
+        let s = (a + b + c) / 2;
+        let area = Math.sqrt(s * (s - a) * (s - b) * (s - c));
+        document.write(`The area of the triangle with sides a = ${a}, b = ${b} and c = ${c} is A = ${area}.`);
+      }
+    })();    
+    </script>
+  </body>
+</html>
+
+
+<!--3) Направите страницу на којој корисник као одговор на промпт када се веб страница учита уноси дужину 3 странице троугла, а као резултат се на страници одштампа површина тог троугла. У ту сврху напишите функцију која као аргументе прима дужине старна троугла и, пошто провери да оне заиста чине троугао, израчунава његову површине користећи полуобим троугла 
+s = (a + b + c)/2
+у формули
+A = sqrt(s * (s - a) * (s - b) * (s - c))-->

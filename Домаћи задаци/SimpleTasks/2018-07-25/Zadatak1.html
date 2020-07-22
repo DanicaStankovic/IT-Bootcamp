@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Zadatak 1</title>
+</head>
+<body>
+  <div id="mojDiv"></div>
+  <script type="text/javascript">
+      let mojString = "Ovo je zadatak za vezbu kod kuce polaznika kursa Razvoja veb stranica na ITBootcamp-u.";
+      const tekst = () => {let mojNiz = mojString.split(" "); return mojNiz;}
+      document.getElementById("mojDiv").innerHTML = tekst();
+  </script>
+</body>
+</html>
+
+<!--
+1.Napraviti HTML stranu na kojoj se nalazi div. Kreirati funkciju koja od prosleđenog stringa kreira niz tako što razdvaja string u odnosu na space. Koristiti arrow function notaciju. Ispisati niz unutar div-a.
+-->

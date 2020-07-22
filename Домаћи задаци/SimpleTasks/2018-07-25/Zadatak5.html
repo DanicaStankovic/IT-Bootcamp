@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Zadatak 5</title>
+</head>
+<body>
+  <div id="prviDiv">
+  	<p>Ovo je prvi paragraf prvog diva.</p>
+  	<p>Ovo je drugi paragraf prvog diva.</p>
+  	<p>Ovo je treci paragraf prvog diva.</p>
+  </div>
+  <div id="drugiDiv">
+    <p>Ovo je prvi paragraf drugog diva.</p>
+  	<p>Ovo je drugi paragraf drugog diva.</p>
+  	<p>Ovo je treci paragraf drugog diva.</p>
+  </div>
+  <button id="prvoDugme">Orange</button>
+  <button id="drugoDugme">Grey</button>
+  <script type="text/javascript">
+      document.getElementById("prvoDugme").addEventListener("click", stampajNarandzastuBoju);
+      document.getElementById("drugoDugme").addEventListener("click", stampajSivuBoju);
+      function stampajNarandzastuBoju() {
+      	document.getElementById("prviDiv").childNodes[3].style.backgroundColor = "orange";
+      }
+     function stampajSivuBoju() {
+     	document.getElementById("drugiDiv").children[1].style.backgroundColor = "grey";
+      }
+
+  </script>
+</body>
+</html>
+
+<!--
+	5.Napraviti HTML stranu na kojoj se nalazi dva diva unutar kojih se nalaze po tri p taga sa proizvoljnim tekstom, i dva tastera.  Klikom na prvi taster obojiti slova drugog paragrafa iz prvog diva narandžastom bojom.  Koristiti childNodes svojstvo. Klikom na drugi taster obojiti slova drugog paragrafa iz drugog diva sivom bojom. Koristiti children svojstvo.
+-->

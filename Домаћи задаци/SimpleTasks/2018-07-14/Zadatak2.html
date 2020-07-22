@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset=utf-8 />
+<style>
+</style>
+</head>
+<body>
+  <script>
+    let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11];
+    let mojDiv = document.createElement("div");
+    let divovId = document.createAttribute("id");
+    divovId.value = "divZaArray";
+    mojDiv.setAttributeNode(divovId);
+    document.body.appendChild(mojDiv);
+    document.getElementById("divZaArray").innerHTML = arr;
+    let mojButton = document.createElement("button");
+    let buttonText = document.createTextNode("Klikni!");
+    mojButton.appendChild(buttonText);
+    document.body.appendChild(mojButton);
+    let klik = document.createAttribute("onclick");
+    mojButton.setAttributeNode(klik);
+    mojButton.onclick = mojaFunkcija;
+    function mojaFunkcija() {
+      let arrHighToLow = [];
+      arrHighToLow = arr.sort(function(a, b) {return b-a});
+      let parZaArray = document.createElement("p");
+      parZaArray.innerHTML = arrHighToLow;
+      document.getElementById("divZaArray").appendChild(parZaArray);
+      let drugiNajveci = arrHighToLow[1];
+      let parZaDrugogNajveceg = document.createElement("p");
+      parZaDrugogNajveceg.innerHTML = `Drugi najveci element ovog niza je: ${drugiNajveci}.`;
+      document.getElementById("divZaArray").appendChild(parZaDrugogNajveceg);
+    }
+    </script>
+</body>
+</html>
+
+<!--2. Create some array of 11 numbers. Show it on the page.Clicking on a button you will sort it (high to low) and show it under the first array.Than write what is the second largest number.-->

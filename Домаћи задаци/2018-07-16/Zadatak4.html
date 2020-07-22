@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset=utf-8 />
+  <title>Zadatak 4</title>
+</head>
+<body>
+  <div id="mojDiv"></div>
+  <script>
+    (function slucajanBroj() {
+	    let broj = Math.floor(1000 + Math.random() * 9000);
+	    document.getElementById("mojDiv").innerHTML = broj;
+      setInterval(slucajanBroj, 10000);
+	  })();
+  </script>
+</body>
+</html>
+
+<!--.Napraviti HTML stranu u okviru koje se nalazi div. Prilikom učitavanja stranice ispisati unutar div-a slučajan četvorocifren broj. Omogućiti da se broj menja na svakih 10 sekundi.-->

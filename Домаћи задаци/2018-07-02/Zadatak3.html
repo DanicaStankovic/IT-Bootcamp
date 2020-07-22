@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+<head>
+</head>
+<body>
+  <script>
+	let fNumbers = [];
+	fNumbers[0] = 0;
+	fNumbers[1] = 1;
+
+	for (let i = 2; i < 20; i++) {
+		fNumbers[i] = fNumbers[i-2] + fNumbers[i-1];
+	}
+	console.log(fNumbers);
+  </script>
+</body>
+</html>
+
+<!--
+3) Write a JavaScript program to print the series of first 20 Fibonacci numbers in the console window, knowing that the first two are 0 and 1.
+Note: The Fibonacci Sequence is the series of numbers: 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, . . . Each subsequent number is the sum of the previous two. -->

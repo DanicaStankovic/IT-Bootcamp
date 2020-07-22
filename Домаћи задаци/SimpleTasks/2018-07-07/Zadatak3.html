@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+<head>
+</head>
+<body>
+<script>
+	let child = {
+		firstName: "Petar",
+		lastName: "Stankovic",
+		kindergarten: "Izvorcic",
+		fullName: function() {
+					return this.firstName + " " + this.lastName;
+				  },
+		fullInfo: function() {
+				   return `Child ${this.firstName} ${this.lastName} goes to kindergarten ${this.kindergarten}.`; 
+				  }
+	};
+	let listOneByOne = "";
+	for (let propertiesAndMethods in child) {
+		listOneByOne += propertiesAndMethods + "\n";
+	}
+	console.log(listOneByOne);
+</script>
+</body>
+</html>
+
+<!--3. Create simple JS object example that will have 3 properties and 2 methods. Use console.log to show those properties and methods one by one.-->

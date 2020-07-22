@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset=utf-8 />
+  <title>Task 3</title>
+</head>
+<body>
+  <form>
+    Start: <input type="number" id="startingNumber" required><br>
+    Length: <input type="number" id="lengthNumber" required><br>
+    Step: <input type="number" id="stepNumber" required><br>
+    <input type="button" name="mojeDugme" onclick="stampajRezultat()" value="Stampaj!">
+  </form>
+  <script>
+    function stampajRezultat() {
+      let startBroj = Number(document.getElementById("startingNumber").value);
+      let lengthBroj = Number(document.getElementById("lengthNumber").value);
+      let stepBroj = Number(document.getElementById("stepNumber").value);
+      let mojArr = document.createElement("arr");
+      mojArr = [];
+      for (i = 1; i < lengthBroj; i++) {
+        mojArr[0] = startBroj;
+        mojArr[i] = ((mojArr[i-1]) + stepBroj);
+      }
+      let mojP = document.createElement("p");     
+      mojP.innerHTML = `Niz = [${mojArr}]`;
+      document.body.appendChild(mojP);
+    }
+  </script>
+</body>
+</html>
+
+<!--3. TASK (20pts)​ Create a page with a form with 3 inputs:Start - where the user will enter starting numberLength - where the user will enter array lengthStep - where the user will enter step numberWhen the user clicks on a button (under the form) program will create and show (on the page,under the form and button) an array of "Length" length that will start from the "Start" number,and every next element will be larger for "Step" number from the one before it.-->

@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+<head>
+</head>
+<body>
+  <script>
+  function faktorijelBroja(n) {
+    let faktorijel = 1;
+    if (n < 0) {
+      console.log(`Greška! Uneli ste negativan broj.`);
+      return -1;
+    } 
+    if (n === 0) {
+      return 1;
+    }
+    for (i = n; i > 0; i--) {
+      faktorijel = n * faktorijelBroja (n-1);
+      return faktorijel;
+    }
+  }
+  console.log(faktorijelBroja(6));
+  </script>
+</body>
+</html>

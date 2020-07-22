@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Functions</h2>
+
+<p id="prompt"></p>
+<button onclick="document.getElementById('demo').innerHTML=`Тemperaturа је  ${toCelsius(temp)} °C.`">Kolika je temperatura u °C?</button>
+
+<p id="demo"></p>
+
+<script>
+let temp = prompt(`Unesite temperaturu u °F: `);
+document.getElementById('prompt').innerHTML=`Temperatura je ${temp} °F.`
+function toCelsius(fahrenheit) {
+   return ((5/9) * (fahrenheit-32)).toFixed(1);
+} 
+</script>
+</body>
+</html>
+<!--За домаћи: Помените приложени код тако да пита посетиоца да унесе температуру у Фаренхајтима, а да се тај број конвертује у Целзијусе и доштапа на притисак дугмета заокружен на 1 децимално место. Нпр. 73 F  да се прикаже као 22.8 C.
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Functions</h2>
+
+<button onclick="document.getElementById('demo').innerHTML=`Тemperaturа је  ${toCelsius(73)} Celziusa`">Kolika je temperatura?</button>
+
+<p id="demo"></p>
+
+<script>
+function toCelsius(fahrenheit) {
+   return (5/9) * (fahrenheit-32);
+} 
+</script>
+
+</body>
+</html>
+-->

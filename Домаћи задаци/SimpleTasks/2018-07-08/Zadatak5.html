@@ -1,0 +1,18 @@
+<!doctype html>
+<html>
+<head>
+</head>
+<body>
+	<div id="div" style="box-sizing:border-box;width:400px;height:200px;border:2px solid #C0809C;"></div>
+	<button onclick="sizeFunction()" style="box-sizing:border-box;height:20px;background-color:#FFC0CB;border:2px solid #C0809C;">Click here!</button>
+<script>
+	function sizeFunction () {
+		let currentWidth = document.getElementById("div").style.width;
+		document.getElementById("div").style.width = document.getElementById("div").style.height;
+		document.getElementById("div").style.height = currentWidth;
+	}
+</script>
+</body>
+</html>
+<!--5. Create simple html page with one box with a border and one button.Clicking on a button you will switch width and height of the box.-->
+

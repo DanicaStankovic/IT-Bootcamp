@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+<head>
+</head>
+<body>
+  <script>
+    let time, hours, minutes, message;
+
+    hours = prompt("Који је сат?");
+    if (hours < 0 || hours > 23) {
+    hours = prompt("Молимо унесите вредност између 0 и 23. Који је сат?");
+    }
+    if (hours < 10) {
+    hours = "0" + hours;
+    }
+    else if (hours >= 10 && hours <= 23) {
+    hours = hours.toString();
+    }
+
+    minutes = prompt("Који је минут?");
+    if (minutes < 0 || minutes > 59) {
+    minutes = prompt("Молимо унесите вредност између 0 и 59. Који је минут?");  
+    }
+    if (minutes < 10) {
+      minutes = "0" + minutes;
+    }
+    else if (minutes >= 10 && minutes <= 59) {
+      minutes = minutes.toString();
+    }
+
+    if (hours == "00" && minutes == "00") {
+        time = hours + minutes;
+    }
+    else if (hours != "00" || minutes != "00") {
+        time = hours;
+    }
+
+    time = Number(time);
+
+    switch (time) {
+    case 12: case 13: case 14: case 15: case 16: message = "Good afternoon!";
+    break;
+    case 17: case 18: case 19: case 20: message = "Good evening!";
+    break;
+    case 21: case 22: case 23: message = "Good night!";
+    break;
+    case 0000: message = "It's midnight!";
+    break;
+    default: message = "Good morning!";
+    }
+    alert(hours + `:` + minutes + `\n` + message);
+
+  </script>
+</body>
+</html>

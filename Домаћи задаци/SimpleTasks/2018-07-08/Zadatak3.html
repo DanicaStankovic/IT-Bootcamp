@@ -1,0 +1,18 @@
+<!doctype html>
+<html>
+<head>
+</head>
+<body>
+	<div id="div1" style="position:fixed;box-sizing:border-box;width:150px;height:250px;border:2px solid #C0809C;">
+		<div id="div2" style="position:relative;height:230px;background-color:#0b5294;margin:10px;"></div>
+	</div>
+	<button onclick="innerDivSize()" style="position:fixed;margin-left:155px;margin-top:125px;box-sizing:border-box;height:20px;background-color:#FFC0CB;border:2px solid #C0809C;">Click here!</button>
+<script>
+	function innerDivSize () {
+		document.getElementById("div2").style.height = "100px";
+	}
+</script>
+</body>
+</html>
+
+<!--3. Create simple HTML page that will have 2 divs (boxes) inside each other and 1 button.Parent div (div1) will be 150px wide and 250px high, it will have border.Inner div (div2), it will have blue background, set some margin || padding.Clicking on a button, you will change inner divs height to 100px;It should look like some kind of a window.-->

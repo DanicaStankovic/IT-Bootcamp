@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+<head>
+</head>
+<body>
+   <div id="div1" style="height:200px; width:400px; border:3px solid grey"></div>
+   <div id="div2" style="height:200px; width:400px; border:3px solid yellow;"></div>
+   <p id="par" style="clear:both;"></p>
+   <button onclick="printingAlert()">Click here!</button>
+   <script>
+      let arr1=[104, 212, 123, 1004, -5, 166, 72, -1058, 9, 1110, 211];
+      let arr2=[101, -102, 1023, 104, 1105, 62, -107, 1080, 109, 107, 111];
+      (function addText() {
+        document.getElementById("div1").innerHTML = `${arr1}`;
+        document.getElementById("div2").innerHTML = `${arr2}`;
+      })();
+
+      (function largestNumberLeft() {
+        largNumLeft = -Infinity;
+        for (i = 0; i < arr1.length; i++) {
+          largNumLeft = Math.max(...arr1);
+        }
+          return largNumLeft;
+      })();
+
+      (function largestNumberRight() {
+        largNumRight = -Infinity;
+        for (i = 0; i < arr2.length; i++) {
+          largNumRight = Math.max(...arr2);
+        }
+          return largNumRight;
+      })();
+      let message = "";
+      if (largNumLeft > largNumRight) {
+        message = `Array1 has the largest element.`;
+      }
+      else message = `Array2 has the largest element.`;
+      
+      function printingAlert () {
+        document.getElementById("par").innerHTML=`The largest element in array1 [${arr1}] is: ${largNumLeft}. The largest element in array2 [${arr2}] is: ${largNumRight}. ${message}`;
+      }
+
+   </script>
+</body>
+</html>
+
+
+<!--2. Create simple HTML page with 2 boxes with borders under each other, paragraph underthem and a button under the paragraph.Create 2 arrays with 11 numbers, create self-invoking function that will show them in the boxes.When you click on a button you will find largest elements in arrays, compare them and write thatmessage which is larger into the paragraph.Example: "Largest element in array1 is 5, largest element in array 2 is 4. Array1 has the largestelement"-->

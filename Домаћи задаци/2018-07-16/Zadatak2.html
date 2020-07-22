@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset=utf-8 />
+  <title>Zadatak 2</title>
+</head>
+<body>
+  <input type="text" id="polje" value="" readonly>
+  <script>
+    (function slucajanBroj() {
+	  let broj = Math.random() * 1000000;
+	  let x = document.getElementById("polje");
+	  x.value = broj.toFixed(2);
+	})();
+  </script>
+</body>
+</html>
+
+<!--2.Napraviti HTML stranu na kojoj se nalazi tekstualno polje. Polje je popunjeno slučajnim brojem. Ispisati slučajan broj sa dve decimale. Obezbediti da polje ne može da se edituje.-->

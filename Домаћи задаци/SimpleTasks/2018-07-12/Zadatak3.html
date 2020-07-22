@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <div id="carNameHolder"></div>
+    <script>
+      let arr = ["Citroen", "Mercedes", "Audi", "Honda", "Fiat"];
+      for (i = 0; i < arr.length; i++) {
+        let cars = document.createElement("ul")
+        let car = document.createElement("li");
+        let carsName = document.createTextNode(arr[i]);
+        car.appendChild(carsName);
+        cars.appendChild(car);
+        document.getElementById("carNameHolder").appendChild(cars);
+      }
+    </script>
+  </body>
+</html>
+
+<!--3. Create simple HTML page with one div, create an array of 5 cars.Write those cars into the unordered list using javascript through "for" loop-->

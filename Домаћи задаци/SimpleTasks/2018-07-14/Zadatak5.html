@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset=utf-8 />
+<style>
+</style>
+</head>
+<body>
+  <form>
+    Name: <input type="text" id="ime" required><br>
+    Email: <input type="text" id="imejl" required><br>
+    <input type="radio" name="gender" value="male"> Male<br>
+    <input type="radio" name="gender" value="female"> Female<br>
+    <input type="button" name="mojeDugme" onclick="stampajRezultat()" value="Stampaj!">
+  </form>
+  <script>
+    function stampajRezultat() {
+      let genders = document.getElementsByName("gender");
+      for (var i = 0; i < genders.length; i++) {
+        if (genders[i].checked) {
+          checkedGender = genders[i].value;
+        }
+      }
+      let unetoIme = document.getElementById("ime").value;
+      let unetiImejl = document.getElementById("imejl").value;
+      let paragraf = document.createElement("p");
+      paragraf.innerHTML = unetoIme + " " + unetiImejl + " " + checkedGender;
+      return document.body.appendChild(paragraf);
+    }
+    </script>
+</body>
+</html>
+
+<!--5. Create a page with 2 inputs "Name" and "Email"; and radio button Male/Female.Clicking on a button you will print results under the button-->

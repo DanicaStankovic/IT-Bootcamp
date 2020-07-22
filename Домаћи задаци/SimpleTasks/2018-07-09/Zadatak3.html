@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+<head>
+</head>
+<body>
+	<p id="demo"></p>
+	<button onclick="document.getElementById('demo').innerHTML = mobilePhone.phoneInfo()">Click here!</button>
+	<script>
+	let mobilePhone = {
+		make: "Huawei",
+		model: "Honor 9",
+		color: "Silver",
+		androidVersion: 8.0,
+		internalMemory: "64gb",
+		phoneInfo : function() {
+			return this.make + " " + this.model;
+			}
+		};	
+	</script>
+</body>
+</html>
+
+<!--3. Create simple HTML page that will have one paragraph and button.Than create JS object mobilePhone with 3 to 5 properties and 1 method, method will give Makeand model of your mobile phone.When you click on a button it will print into the paragraph Make and model of your mobilephone.-->
